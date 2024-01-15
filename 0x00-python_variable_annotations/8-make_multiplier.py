@@ -3,11 +3,12 @@
 
 
 from typing import Callable
+called = Callable[[float], float]
 
-
-def make_multiplier(multiplier: float) -> Callable[[float], float]:
+def make_multiplier(multiplier: float) -> called:
     """
-    This returns a function that multiplies a float by the specified multiplier.
+    This returns a function that multiplies
+    a float by the specified multiplier.
 
     Parameters:
     - multiplier (float): The multiplier to be used in the returned function.
