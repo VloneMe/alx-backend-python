@@ -2,10 +2,11 @@
 """ Complex types - functions """
 
 
-from typing import List, Tuple
+from typing import Iterable, Sequence, List, Union, Tuple
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence])\
+        -> List[Tuple[Sequence, int]]:
     """
     This returns a list of tuples where each tuple contains
     an element from the input list
