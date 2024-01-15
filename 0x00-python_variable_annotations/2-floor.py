@@ -12,4 +12,4 @@ def floor(n: float) -> float:
     Returns:
     float: The floor value of the input float.
     """
-    return n
+    return int(n)
