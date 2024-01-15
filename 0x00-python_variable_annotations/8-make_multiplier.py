@@ -5,6 +5,7 @@
 from typing import Callable
 called = Callable[[float], float]
 
+
 def make_multiplier(multiplier: float) -> called:
     """
     This returns a function that multiplies
