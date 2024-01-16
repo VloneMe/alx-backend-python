@@ -2,8 +2,6 @@
 """ Tasks """
 
 import asyncio
-import asyncio
-from typing import List
 
 
 wait_n = __import__('1-concurrent_coroutines').wait_n
@@ -20,9 +18,6 @@ def task_wait_random(max_delay: int) -> asyncio.Task:
     Returns:
         asyncio.Task: Task for the wait_random coroutine.
     """
-    first_time = time.perf_counter()
-    asyncio.run(wait_n(max_delay, n))
-    elapsed = time.perf_counter() - first_time
-    total_time = elapsed / n
+    task = asyncio.create_task(wait_random(max_delay))
 
-    return total_time
+    return task
