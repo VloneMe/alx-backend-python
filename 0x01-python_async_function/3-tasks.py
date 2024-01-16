@@ -4,8 +4,7 @@
 import asyncio
 
 
-wait_n = __import__('1-concurrent_coroutines').wait_n
-
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 def task_wait_random(max_delay: int) -> asyncio.Task:
     """
