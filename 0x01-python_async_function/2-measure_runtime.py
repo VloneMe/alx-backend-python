@@ -19,12 +19,9 @@ def measure_time(n: int, max_delay: int = 10) -> float:
     Returns:
         float: Average time per iteration.
     """
-    start_time = time.perf_counter() 
+    first_time = time.perf_counter()
+    asyncio.run(wait_n(max_delay, n))
+    elapsed = time.perf_counter() - first_time
+    total_time = elapsed / n
 
-    # Measure the total execution time for wait_n(n, max_delay)
-    asyncio.run(wait_n(n, max_delay))
-
-    end_time = time.perf_counter() - first_time 
-
-    # Return the average time per iteration
-    return end_time / n
+    return total_time
