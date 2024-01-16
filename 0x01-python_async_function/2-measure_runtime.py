@@ -4,7 +4,7 @@
 
 import time
 from typing import List
-from random_delay_module import wait_n  # Replace with the actual module name
+import asyncio
 
 
 def measure_time(n: int, max_delay: int = 10) -> float:
