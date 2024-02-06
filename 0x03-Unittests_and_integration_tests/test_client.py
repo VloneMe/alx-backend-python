@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """Unit tests for parameterized functions, Mock HTTP calls, and memoization."""
 import unittest
 from unittest.mock import patch, PropertyMock, MagicMock
