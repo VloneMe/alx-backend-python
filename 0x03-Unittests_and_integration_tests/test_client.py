@@ -57,7 +57,8 @@ class TestGithubOrgClient(unittest.TestCase):
         Args:
             mock_get (MagicMock): Mocked get_json function.
 
-        Asserts that GithubOrgClient.public_repos returns the correct list of repos.
+        Asserts that GithubOrgClient.public_repos
+        returns the correct list of repos.
         """
         with patch.object(GithubOrgClient,
                           "_public_repos_url",
@@ -101,7 +102,8 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         """
         Set up class method to initialize the patcher.
 
-        It is part of the unittest.TestCase API method to return example payloads
+        It is part of the unittest.TestCase
+        API method to return example payloads
         found in the fixtures.
         """
         cls.get_patcher = patch('requests.get', side_effect=HTTPError)
@@ -126,9 +128,11 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
 
     def test_public_repos_with_license(self):
         """
-        Integration test for GithubOrgClient.public_repos with the argument license.
+        Integration test for GithubOrgClient.public_repos
+        with the argument license.
 
-        Asserts that GithubOrgClient.public_repos works as expected with the license argument.
+        Asserts that GithubOrgClient.public_repos works as
+        expected with the license argument.
         """
         test_class = GithubOrgClient("holberton")
         assert True
